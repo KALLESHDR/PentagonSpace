@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            border: 50px solid blue;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        <h1>ADMIN:</h1>
+        1.add/view/edit/delete n number of bank with different name or same name but login credintials are unique to all banks
+        2.add/view/edit/delete n number of Cybercrime branches with different name or same name but login credintials are unique to all Cybercrime Branch
+        <hr>
+    <h1>BANK:</h1>
+        1.add/view/edit/delete users
+            Validations:
+                1.unique account numbers
+                2.one person can have more accounts in different banks
+                3.Only that bank can see its users & transactions other bank users can not display for that bank
+                4. While adding users it as to ask face scan and scan their face and store in database for future validation
+                5.Initial amounts are added to all acpounts while creating
+                6.Bank can mark it own bank transaction as froaud and that whill reflect to both user and ccb department
+                7.While transfering amount it as to ask user to scan their face if it matches it go for transaction, and verify if transfering account is in ccd database and marked as frouad then it as to give alert and stop transaction
+                8.If face recognation it as to ask fingerprint recognation also for verification
+                9. If account is found in ccb database then it as to lock that account and that user can not recive or send money from his account {only if marked as frouad}
+                <hr>
+    <h1>USERS:</h1>
+        1.Register user if and only that user is added by any one of the bank and use opt during registration User interface its profile and 1 face photo captured during adding user by bank along with his initial amount account number and ifsc codes as normal
+        2.Initate transaction during it transaction
+            Validations:
+                1.need to check it the reciving account is in cybercrime database or it marked as frouad earliear {if yes show alert and terminate transaction, else allow to transfer amount}
+                2. during transaction verify user face and fingerprint {if both fails go for otp to transfer} and capture the User location and show in transaction history {Demo is also ok to show latitude and longitude}
+                3. enable 1 frouad button in front of all transaction, if user finds it as fruoad then user click on that button and it mark as froud and reflect to bank and cybercrime also
+                4. If user marked as froud or any fir filled on their account it reflect in their profile and those users are not allowed to transfer or recive amount untill they can unlocked by cybercrime branch
+                5.User can see all of their transactions history froud history
+                <hr>
+    <h1>CyberCrimeBranch:</h1>
+        1.See all transaction and have option to mark any transaction as froud and enable File FIR Button if and only if it trransaction marked as frouad and create 1 Random FIR ids and send user that FIR as filled and case as been taken and send SMS/E-Mail as confirmations
+        2.Afrter filling FIR Enable 1 more button as refund If they press on that it as to return that transaction amount to account where it is debited and reduce that amount from account where it is credited and send 1 normal message to user that their refund as proccessed along with thier updated balance after refund proccess and case as been solved
+        3. Options to unlock it account in any case is required or it not frouad transaction they can remove that frouad complient
+        <hr>
+</pre>
+</body>
+
+</html>
